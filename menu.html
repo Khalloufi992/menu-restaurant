@@ -1,108 +1,161 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 
-<head>    
-  <meta charset="UTF-8">  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-  <title>Delicious Bites Menu</title> 
-  <link rel="stylesheet" href="style.css">
-</head> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delicious Bites</title>
 
-<body>   
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Navbar -->
-  <nav>
-    <h2>Delicious Bites</h2>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Menu</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Custom CSS -->
+  <style>
+    /* Hero Section */
+    .hero {
+      height: 90vh;
+      background: url('grilled-salmon-3.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
 
-  <h1 style="text-align:center;">Delicious Bites Menu</h1>
+    .hero-overlay {
+      background: rgba(0,0,0,0.5);
+      padding: 40px;
+      border-radius: 15px;
+    }
 
-  <!-- Appetizers -->
-  <h2>Appetizers</h2>
-  <div class="menu-container">
+    /* Images same size */
+    .fixed-img {
+      height: 220px;
+      object-fit: cover;
+      width: 100%;
+    }
 
-    <div class="card">
-      <img src="Caprese-Salad_7-683x1024.jpg" alt="Dish Image">
-      <h3>Caprese Salad</h3>
-      <p>Fresh tomatoes, mozzarella, and basil with balsamic glaze.</p>
+    footer {
+      background: #222;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Delicious Bites</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>Welcome to Delicious Bites</h1>
+    <p>Fresh food, great taste</p>
+    <a href="#menu" class="btn btn-warning mt-3">Explore Menu</a>
+  </div>
+</section>
+
+<!-- Menu -->
+<section id="menu" class="container my-5">
+  <h2 class="text-center mb-4">Our Menu</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="grilled-salmon-3.jpg" class="card-img-top fixed-img">
+        <div class="card-body text-center">
+          <h5>Grilled Salmon</h5>
+          <p>Lemon butter sauce</p>
+          <strong>$15</strong>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <img src="Simple-Arugula-Salad.jpg" alt="Dish Image">
-      <h3>Arugula Salad</h3>
-      <p>With pine nuts, parmesan, and lemon dressing.</p>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="couscous-poisson.jpg" class="card-img-top fixed-img">
+        <div class="card-body text-center">
+          <h5>Couscous</h5>
+          <p>Traditional Tunisian dish</p>
+          <strong>$12</strong>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <img src="mechouia.jpg" alt="Dish Image">
-      <h3>Mechouia Salad</h3>
-      <p>Tunisian grilled salad with tuna and olives.</p>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="fondant-au-chocolat.png" class="card-img-top fixed-img">
+        <div class="card-body text-center">
+          <h5>Chocolate Dessert</h5>
+          <p>Rich & creamy</p>
+          <strong>$8</strong>
+        </div>
+      </div>
     </div>
 
   </div>
+</section>
 
-  <!-- Main Courses -->
-  <h2>Main Courses</h2>
-  <div class="menu-container">
+<!-- About -->
+<section id="about" class="container my-5">
+  <div class="row align-items-center">
 
-    <div class="card">
-      <img src="grilled-salmon-3.jpg" alt="Dish Image">
-      <h3>Grilled Salmon</h3>
-      <p>Perfectly grilled with lemon butter sauce.</p>
+    <div class="col-md-6">
+      <img src="mechouia.jpg" class="img-fluid rounded shadow">
     </div>
 
-    <div class="card">
-      <img src="couscous-poisson.jpg" alt="Dish Image">
-      <h3>Couscous</h3>
-      <p>Traditional couscous with vegetables.</p>
-    </div>
-
-    <div class="card">
-      <img src="Lamb-shank-e1456023031696-768x768.jpg" alt="Dish Image">
-      <h3>Lamb Shanks</h3>
-      <p>Roasted with garlic and rosemary.</p>
+    <div class="col-md-6">
+      <h2>About Us</h2>
+      <p>
+        Delicious Bites is a modern restaurant offering fresh and tasty meals.
+        We combine traditional and international cuisine to give you the best experience.
+      </p>
     </div>
 
   </div>
+</section>
 
-  <!-- Desserts -->
-  <h2>Desserts</h2>
-  <div class="menu-container">
+<!-- Contact -->
+<section id="contact" class="container my-5">
+  <h2 class="text-center mb-4">Contact Us</h2>
 
-    <div class="card">
-      <img src="fondant-au-chocolat.png" alt="Dish Image">
-      <h3>Chocolate Fondue</h3>
-      <p>Fruits with rich chocolate.</p>
-    </div>
+  <form class="mx-auto" style="max-width:500px;">
+    <input type="text" class="form-control mb-3" placeholder="Your Name">
+    <input type="email" class="form-control mb-3" placeholder="Your Email">
+    <textarea class="form-control mb-3" rows="4" placeholder="Your Message"></textarea>
 
-    <div class="card">
-      <img src="2020_12_02_chocolate_tiramisu_tart_6.jpg" alt="Dish Image">
-      <h3>Tiramisu Tart</h3>
-      <p>Coffee and mascarpone dessert.</p>
-    </div>
+    <button class="btn btn-dark w-100">Send</button>
+  </form>
+</section>
 
-    <div class="card">
-      <img src="pistachiobrownies-2-9.jpg" alt="Dish Image">
-      <h3>Pistachio Brownies</h3>
-      <p>Chocolate brownies with pistachios.</p>
-    </div>
+<!-- Footer -->
+<footer>
+  © 2026 Tunisia restaurant | All Rights Reserved
+</footer>
 
-  </div>
-
-  <!-- Contact -->
-  <p style="text-align:center;">
-    <a href="contact.html">Contact us for reservations</a>
-  </p>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Delicious Bites | All rights reserved</p>
-  </footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
